@@ -6,23 +6,17 @@ Créer un nouveau repo par ligne de commande :
 
 0) echo "description du projet" >> readme.md
 
-1) se placer dans le repos local à mettre sur dépot distant
-git init
+1) se placer dans le repos local à mettre sur dépot distant ; git init
 
-2) ajouter fichier à envoyer sur la prochaine "sauvegarde"
-git add fichier.fi
+2) ajouter fichier à envoyer sur la prochaine "sauvegarde" ; git add fichier.fi
 
-3) Commenter la prochaine "sauvegarde"
-git commit -param "commentaire"
+3) Commenter la prochaine "sauvegarde" ; git commit -param "commentaire"
 
-4) Sélection de la branche sur laquelle l'envoie sera fait
-git branch -param nom_de_branche
+4) Sélection de la branche sur laquelle l'envoie sera fait ; git branch -param nom_de_branche
 
-5) ??
-git remote add origin https://...
+5) ?? ; git remote add origin https://...
 
-6) envoie de la "sauvegarde"
-git push -u origin main
+6) envoie de la "sauvegarde" ; git push -u origin main
 
 ==========================================
 
