@@ -1,0 +1,25 @@
+git = gestionnaire de version
+github = service en ligne
+
+git enregistre les versions du document en créant un /repo
+(local ou distant(privé ou public)).
+le repo local permet de garder son travail pres de nous, le distant est hébergé sur le réseau 
+et permet d'avoir plusieurs repo, un historique délocalisé et aussi des droits différents.
+
+les enregistrements de versions permettent de revenir à des versions précédentes
+pour etudier les codes d'un point de vue logique et administratif
+et tenter de minimiser les marges d'erreur. 
+
+Le local est composé de 3 phase de travail
+
+1. le working directory : dossier de travail direct sur l'ordinateur.
+2. le stage : représente les fihciers modifié qui devra apparaitre dans la prochaine version. (git add)
+3. le repo : stockage des fihciers
+
+conseil ==================
+
+1. Toujours commencer par créer un dépot distant lors d'un nouveau projet.
+2. Toujours commencer par un dépot local avant tout (l'intéret est de mettre en dépot distant
+    la version sûr et utilisable, alors que la version local est un clone de la version distante,
+    et plus un enregistrement personnel pour les modification de code).
+3. 
