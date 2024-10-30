@@ -14,7 +14,7 @@ Le local est composé de 3 phase de travail
 
 1. le working directory : dossier de travail direct sur l'ordinateur.
 2. le stage : représente les fihciers modifié qui devra apparaitre dans la prochaine version. (git add)
-3. le repo : stockage des fihciers
+3. le repo : stockage des fichiers (git commit)
 
 conseil ==================
 
