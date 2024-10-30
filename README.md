@@ -87,3 +87,10 @@ conseil ==================
     la version sûr et utilisable, alors que la version local est un clone de la version distante,
     et plus un enregistrement personnel pour les modification de code).
 3. toujours laisser un message claire sur les modifications d'un fichier dans un commit.
+
+--------------------------------------------------------------------------------------
+
+git remote rename nomorigine neworigine = renommer un nom de lien
+
+git remote set-url origin git@github.com:user/file = modifier un lien attribué à un nom
+
