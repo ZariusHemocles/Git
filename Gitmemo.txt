@@ -13,11 +13,26 @@ et tenter de minimiser les marges d'erreur.
 à chaque actions sensible, les identifiants seront demandés si la connexion se fait en 
 https, mais les identifiants ne seront pas demandés en SSH.
 
+)) avant toute chose, activer le protocole ssh pour la connexion avec ; eval "$(ssh-agent -s)"
+
 a) ssh-keygen -t ed25519 -C "your_email@example.com"
+
+- générer la clé en se plaçant dans le dossier /.ssh/
+
 b) copier le contenu dela clé.pub pour enregistrer sur le serveur github
+
+- cat /.ssh/clépublique.pub
+
 c) commencer à relier le repo local au distant.
 
+- ssh-add /.ssh/cléprivé pour ajouter la clé à l'agent qui fait la requete
+
 - git remote add origin git@github.com:user/Project.git
+    # ajouter l'url du depot git distant
+- git branch -M main
+    # placer le prochain push sur la branche main
+- git push -u origin main
+    # pousser les éléments sur repo distant
 
 
 Le local est composé de 3 phase de travail
