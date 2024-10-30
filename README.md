@@ -57,17 +57,19 @@ a) ssh-keygen -t ed25519 -C "your_email@example.com"
 b) copier le contenu dela clé.pub pour enregistrer sur le serveur github
 
 - cat /.ssh/clépublique.pub
+        ou envoyer la clé dans /.ssh/ avec la commande suivante ;
+       pbcopy < ~/.ssh/clépublique.pub
 
 c) commencer à relier le repo local au distant.
 
 - ssh-add /.ssh/cléprivé pour ajouter la clé à l'agent qui fait la requete
 
 - git remote add origin git@github.com:user/Project.git
-    # ajouter l'url du depot git distant
+    ~ ajouter l'url du depot git distant
 - git branch -M main
-    # placer le prochain push sur la branche main
+    ~ placer le prochain push sur la branche main
 - git push -u origin main
-    # pousser les éléments sur repo distant
+    ~ pousser les éléments sur repo distant
 
 
 Le local est composé de 3 phase de travail
@@ -80,6 +82,25 @@ pour verifier, faire 'git status'
 si le document est en rouge, il est modifié mais pas indexé
 si il est vert, le document à été git add et est maintenant en stage (indexé)
 
+les branches =============================
+
+L'utilisation des branches est utiles pour eviter d'affecter des versions fonctionnel par de nouvelles modifications. les branches sont donc des copies de la branche principale à un instant T où l'on peu tenter des choses expérimentales.
+
+git branch branche2 = créer une nouvelle branche nommé branche2
+
+git checkout branche2 = se placer sur la branche2
+
+git push -u origin branche2 = pousser les modification de la branche sur le repo dont l'origine de la branche est branche2
+
+git merge brancheX = fusionner des branches ;
+    se placer sur la branche supérieur (par exemple : Main, Branche2, Branche3)
+    ici branche2 et faire un 'git merge branche3' pour faire fusionner la branche 2 et 3.
+    Cette commande doit s'utiliser depuis la branche à laquelle on veut apporter des modifications.
+
+Le clonage de repo =================
+
+
+
 conseil ==================
 
 1. Toujours commencer par créer un dépot distant lors d'un nouveau projet.
@@ -87,6 +108,8 @@ conseil ==================
     la version sûr et utilisable, alors que la version local est un clone de la version distante,
     et plus un enregistrement personnel pour les modification de code).
 3. toujours laisser un message claire sur les modifications d'un fichier dans un commit.
+4. avant de faire un push, (si l'on ne travail pas seul ou alors qu'on à tendance à faire n'importe quoi)
+ il vaut mieux faire un pull pour récupérer le repo à jour, pour y apporter nos modifications avec un push.
 
 --------------------------------------------------------------------------------------
 
